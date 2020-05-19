@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingHorizontal="14dp"
+    android:background="@drawable/layout_item_bill"
+    android:focusable="true">
+
+    <ImageView
+        android:layout_marginTop="8dp"
+        android:id="@+id/img_type"
+        android:layout_width="28dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_food_select" />
+
+    <TextView
+        android:id="@+id/text_remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/colorText"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/img_type"
+        app:layout_constraintLeft_toRightOf="@id/img_type"
+        app:layout_constraintTop_toTopOf="@id/img_type"
+        tools:ignore="RtlHardcoded"
+        tools:text="小白菜" />
+
+    <TextView
+        android:id="@+id/text_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:textColor="@color/colorText"
+        android:textSize="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/text_remark"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="RtlHardcoded"
+        tools:text="14" />
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/img_type"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorMainLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="1dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

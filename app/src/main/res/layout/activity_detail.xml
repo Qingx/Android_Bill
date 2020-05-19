@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackGround"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_top_left"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详情"
+            android:textColor="@color/colorText"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_type"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/layout_item_bill"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_top">
+
+        <TextView
+            android:id="@+id/text_hint_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="类型"
+            android:textColor="@color/colorHint"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/text_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/colorText"
+            android:textSize="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/text_hint_type"
+            app:layout_constraintLeft_toRightOf="@id/text_hint_type"
+            tools:text="餐饮" />
+
+        <ImageView
+            android:id="@+id/img_type"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_food_select" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line_type"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/colorMainLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_type" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_money"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/layout_item_bill"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_type">
+
+        <TextView
+            android:id="@+id/text_hint_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="金额"
+            android:textColor="@color/colorHint"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/text_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/colorText"
+            android:textSize="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/text_hint_money"
+            app:layout_constraintLeft_toRightOf="@id/text_hint_money"
+            tools:text="餐饮" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line_money"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/colorMainLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_money" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_date"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/layout_item_bill"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_money">
+
+        <TextView
+            android:id="@+id/text_hint_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="日期"
+            android:textColor="@color/colorHint"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/colorText"
+            android:textSize="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/text_hint_date"
+            app:layout_constraintLeft_toRightOf="@id/text_hint_date"
+            tools:text="餐饮" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line_date"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/colorMainLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_date" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_remark"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/layout_item_bill"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_date">
+
+        <TextView
+            android:id="@+id/text_hint_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="备注"
+            android:textColor="@color/colorHint"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/text_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/colorText"
+            android:textSize="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/text_hint_remark"
+            app:layout_constraintLeft_toRightOf="@id/text_hint_remark"
+            tools:text="餐饮" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line_remark"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/colorMainLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_remark" />
+
+    <Button
+        android:id="@+id/layout_change"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/layout_item_bill"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="编辑"
+        android:textColor="@color/colorText"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/line_bottom" />
+
+    <View
+        android:id="@+id/line_bottom"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginVertical="8dp"
+        android:background="@color/colorMainLine"
+        app:layout_constraintBottom_toBottomOf="@id/layout_change"
+        app:layout_constraintLeft_toRightOf="@id/layout_change"
+        app:layout_constraintRight_toLeftOf="@id/layout_remove"
+        app:layout_constraintTop_toTopOf="@id/layout_change" />
+
+    <Button
+        android:id="@+id/layout_remove"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/layout_item_bill"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="删除"
+        android:textColor="@color/colorMainRed"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/layout_change"
+        app:layout_constraintLeft_toRightOf="@id/line_bottom"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/layout_change" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorMainLine"
+        app:layout_constraintBottom_toTopOf="@id/layout_change"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

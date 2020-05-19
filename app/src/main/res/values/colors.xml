@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F4606C</color>
+    <color name="colorPrimaryDark">#F4606C</color>
+    <color name="colorAccent">#F4606C</color>
+
+    <color name="colorBackGround">#f4f5f7</color>
+    <color name="colorText">#131313</color>
+    <color name="colorHint">#bcbcbc</color>
+    <color name="colorTypeNormal">#cfcfcf</color>
+    <color name="mainSearchHint">#a5a5a7</color>
+    <color name="colorSearchBack">#ecedef</color>
+    <color name="colorMainLine">#ececec</color>
+    <color name="colorSelectGray">#e7e7e7</color>
+    <color name="colorMainWhite">#ffffff</color>
+    <color name="colorMainRed">#ee2323</color>
+</resources>
